@@ -1,13 +1,311 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Markazi Text', serif;
+  font-family: 'Karla', sans-serif;
+
+}
+
+
+
+header,
+footer,
+.hero-section,
+.specials-section,
+.testimonials-section,
+.aboutus-section {
+  width: 100%;
+
+
+}
+
+.primary-nav,
+.hero-container,
+.testimonials-container,
+.aboutus-container,
+.footer-container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+
+.primary-nav {
+  margin: 0 auto;
+
+
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-nav {
+  width: 258px;
+}
+
+
+.primary-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.primary-nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.hero-section {
+  background-color: #495E57;
+  height: 406px;
+  display: flex;
+  align-items: center;
+
+}
+
+.hero-container {
+  margin: 0 auto;
+
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hero-container button {
+  width: 200px;
+  height: 40px;
+  border-radius: 16px;
+  border: none;
+  background-color: #F4CE14;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hero-text-container {
+  text-align: left;
+  width: 422px;
+  color: white;
+}
+
+.hero-text-container h1 {
+  margin: 0 0 0 0;
+  padding: 0;
+  color: #F4CE14;
+  font-family: 'Markazi Text';
+  line-height: 0.8;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.hero-text-container h3 {
+  margin-top: 0;
+  font-family: 'Markazi Text';
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.hero-text-container {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hero-photo {
+  width: 400px;
+  height: 424px;
+  border-radius: 16px;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+}
+
+.specials-section {
+  height: 715px;
+
+}
+
+.testimonials-section {
+  height: 590px;
+  background-color: #495E57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.testimonials-section h2 {
+  margin: 0;
+  color: white;
+  font-family: 'Markazi Text';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 0.8;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  background-color: white;
+  padding: 10px;
+  width: 220px;
+  height: 374px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+article h4 {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.guest-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.stars-rating {
+  margin: 10px 0;
+
+}
+
+article p {
+  margin-bottom: 10px;
+}
+
+.aboutus-section {
+  height: 578px;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.aboutus-container {
+  height: 518px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.aboutus-container h2,
+.aboutus-container p {
+  width: 422px;
+}
+
+.aboutus-container h2 {
+  margin: 0;
+  font-family: 'Markazi Text';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 0.8;
+}
+
+.aboutus-container h4 {
+  margin: 0;
+  font-family: 'Markazi Text';
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.aboutus-container p {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.photo-container-1 {
+  width: 272px;
+  height: 320px;
+  /* border: 1px solid black; */
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.photo-container-2 {
+  width: 272px;
+  height: 320px;
+  /* border: 1px solid black; */
+  position: absolute;
+  right: 200px;
+  top: 198px;
+  z-index: -1;
+
+}
+
+.photo-chefs-b,
+.photo-chefs-a {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+
+}
+
+
+footer {
+  background-color: #495E57;
+
+
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer-container {
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-footer {
+  width: 173px;
+}
+
+.footer-nav-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+
+}
+
+.footer-nav-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-container a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
 }
