@@ -4,9 +4,11 @@ import Nav from "./Nav"
 function Header() {
   return (
     <>
-      <header>
-        <Nav />
-      </header>
+        <div className='anchor-nav'>
+          <header>
+              <Nav />
+          </header>
+        </div>
     </>
   )
 }

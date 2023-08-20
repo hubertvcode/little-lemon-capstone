@@ -11,7 +11,6 @@ body {
 }
 
 
-
 header,
 footer,
 .hero-section,
@@ -19,293 +18,1448 @@ footer,
 .testimonials-section,
 .aboutus-section {
   width: 100%;
-
-
 }
 
 .primary-nav,
 .hero-container,
+.specials-grid-container,
 .testimonials-container,
 .aboutus-container,
 .footer-container {
   margin: 0 auto;
-  width: 960px;
+  max-width: 60em;
 }
 
 
+footer,
+.hero-section,
+.specials-section,
+.testimonials-section,
+.aboutus-section {
+  height: fit-content;
+  padding: 2em;
+
+
+}
+
+
+
+/* HAMBURGER MENU CSS */
+
+.anchor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  
+}
+
+header {
+  background-color: white;
+  padding: 1em 2em;
+  position: relative;
+}
+
 .primary-nav {
-  margin: 0 auto;
-
-
-  height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
 }
 
 .logo-nav {
   width: 258px;
 }
 
-
-.primary-nav ul {
+.hamburger{
+  width: 2rem;
+  height: 2rem;
   display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.primary-nav a {
-  color: black;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-.hero-section {
-  background-color: #495E57;
-  height: 406px;
-  display: flex;
-  align-items: center;
-
-}
-
-.hero-container {
-  margin: 0 auto;
-
-  height: 346px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  position: relative;
-}
-
-.hero-container button {
-  width: 200px;
-  height: 40px;
-  border-radius: 16px;
-  border: none;
-  background-color: #F4CE14;
-  font-family: 'Karla', sans-serif;
-  font-weight: bold;
-  font-size: 18px;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
   cursor: pointer;
 }
 
-.hero-text-container {
-  text-align: left;
-  width: 422px;
-  color: white;
+.burger{
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: black;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
 }
 
-.hero-text-container h1 {
-  margin: 0 0 0 0;
-  padding: 0;
-  color: #F4CE14;
-  font-family: 'Markazi Text';
-  line-height: 0.8;
-  font-weight: bold;
-  font-size: 64px;
-}
-
-.hero-text-container h3 {
-  margin-top: 0;
-  font-family: 'Markazi Text';
-  font-weight: 400;
-  font-size: 32px;
-}
-
-.hero-text-container {
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.hero-photo {
-  width: 400px;
-  height: 424px;
-  border-radius: 16px;
-  position: absolute;
-  right: 0px;
-  top: 5px;
-}
-
-.specials-section {
-  height: 715px;
-
-}
-
-.testimonials-section {
-  height: 590px;
-  background-color: #495E57;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.testimonials-section h2 {
+.primary-nav ul {
   margin: 0;
-  color: white;
-  font-family: 'Markazi Text';
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 0.8;
-}
-
-.testimonials-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-article {
-  background-color: white;
-  padding: 10px;
-  width: 220px;
-  height: 374px;
-  border-radius: 16px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
-article h4 {
-  margin: 10px 0;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.guest-photo {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-}
-
-.stars-rating {
-  margin: 10px 0;
-
-}
-
-article p {
-  margin-bottom: 10px;
-}
-
-.aboutus-section {
-  height: 578px;
-  display: flex;
-  align-items: center;
-
-}
-
-
-.aboutus-container {
-  height: 518px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
-}
-
-.aboutus-container h2,
-.aboutus-container p {
-  width: 422px;
-}
-
-.aboutus-container h2 {
-  margin: 0;
-  font-family: 'Markazi Text';
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 0.8;
-}
-
-.aboutus-container h4 {
-  margin: 0;
-  font-family: 'Markazi Text';
-  font-weight: 600;
-  font-size: 32px;
-}
-
-.aboutus-container p {
-  margin-top: 50px;
-  margin-bottom: 0;
-  font-size: 20px;
-}
-
-.photo-container-1 {
-  width: 272px;
-  height: 320px;
-  /* border: 1px solid black; */
-  position: absolute;
-  right: 0;
-  top: 0;
-
-}
-
-.photo-container-2 {
-  width: 272px;
-  height: 320px;
-  /* border: 1px solid black; */
-  position: absolute;
-  right: 200px;
-  top: 198px;
-  z-index: -1;
-
-}
-
-.photo-chefs-b,
-.photo-chefs-a {
+  padding: 2em 0.5em;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-
-}
-
-
-footer {
-  background-color: #495E57;
-
-
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 106.69px;
+  right: -100%;
+  opacity: 0;
+  transition: all 0.3s linear;
+  background-color: #F4CE14;
 
 }
 
-.footer-container {
-
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.primary-nav ul.visible {
+  transform: translateX(100%);
+  opacity : 1;
+  top: 106.69px;
+  right: 100%;
 }
 
-.logo-footer {
-  width: 173px;
-}
 
-.footer-nav-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 80px;
-
-}
-
-.footer-nav-container ul {
+.primary-nav ul li {
   list-style: none;
-  padding: 0;
+  /* border-bottom: solid black 1px; */
+
 }
 
-.footer-nav-container a {
-  color: white;
+.primary-nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 0.75em;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: black;
+  background-color: #F4CE14;
+  border-bottom: solid black 1px;
+
 }
+
+.primary-nav ul li a:not(.active):hover,
+.primary-nav .active {
+  background-color:  #495E57;
+  color:   #F4CE14;
+}
+
+/* END HAMBURGER MENU CSS */
+
+
+  .hero-section {
+    background-color: #495E57;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-container {
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+
+  }
+
+  .cta-reserve-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    height: 40px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F4CE14;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  .hero-text-container {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .hero-text-container h1 {
+    margin: 0 0 0 0;
+    padding: 0;
+    color: #F4CE14;
+    font-family: 'Markazi Text';
+    line-height: 0.8;
+    font-weight: bold;
+    font-size: 64px;
+  }
+
+  .hero-text-container h3 {
+    margin-top: 0;
+    font-family: 'Markazi Text';
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 424px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+
+  .specials-section {
+    padding: 2em 0.5em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .specials-section-title {
+    margin: 0 0 2em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  
+  
+  }
+  
+  .specials-title {
+    text-align: center;
+    margin: 0;
+    font-family: 'Markazi Text';
+    line-height: 0.8;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  
+  a.cta-online-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    width: 200px;
+    height: 40px;
+    border-radius: 16px;
+    border: none;
+    background-color: #F4CE14;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* .specials-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.85em;
+  }
+  
+  .specials-card {
+    background-color: #EDEFEE;
+    width: 300px;
+    height: 500px;
+    border: solid 1px black;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .dish-info {
+    padding: 1.5em;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .dish-photo {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    object-fit: cover;
+
+  } */
+
+  .specials-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.85em;
+  }
+
+  .specials-card {
+    background-color: #EDEFEE;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1em;
+  }
+  
+  .dish-info {
+    padding: 1.5em;
+    width: 60%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .dish-photo {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    order: 2;
+
+  }
+  
+  .dish-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dish-title,
+  .dish-price {
+    margin: 0;
+  }
+  
+  .dish-title {
+    font-family: 'Markazi Text';
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+  .dish-price {
+    font-weight: bold;
+    color: #EE9972;
+    font-size: 1rem;
+  }
+
+  .dish-description {
+    width: 100%;
+    height: 3.6em;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+  }
+  
+  .delivery-link {
+    display: block;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .delivery-icon {
+    margin-left: 1em;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+
+  
+  .testimonials-section {
+    height: fit-content;
+    background-color: #495E57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  .testimonials-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 1.5em;
+  }
+  
+  .testimonials-section h2 {
+    margin: 0;
+    color: white;
+    font-family: 'Markazi Text';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.8;
+  }
+  
+  .testimonial-card {
+    background-color: white;
+    padding: 10px;
+    width: 220px;
+    height: 374px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .testimonial-card h4 {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .guest-photo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+  }
+  
+  .stars-rating {
+    margin: 10px 0;
+  }
+  
+  .testimonial-card p {
+    margin-bottom: 10px;
+  }
+
+  .aboutus-section {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .aboutus-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutus-container h2,
+  .aboutus-container p {
+    text-align: left;
+    width: 100%;
+  }
+
+  .aboutus-container h2 {
+    margin: 0;
+    font-family: 'Markazi Text';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 0.8;
+  }
+
+  .aboutus-container h4 {
+    margin: 0;
+    font-family: 'Markazi Text';
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  .aboutus-container p {
+    margin: 50px 0;
+    font-size: 20px;
+  }
+
+  .aboutus-images-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+
+  }
+  .photo-container-1 {
+    width: 100%;
+    position: unset;
+  }
+  
+  .photo-container-2 {
+    width: 100%;
+    position: unset;
+  }
+  
+  .photo-chefs-b,
+  .photo-chefs-a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    background-color: #495E57;
+  }
+
+  .footer-container {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.5em;
+  }
+
+  .logo-footer {
+    width: 173px;
+  }
+  
+  .footer-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-container li {
+    margin: 0.5em 0;
+  }
+  
+  .footer-container a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.250rem;
+  }
+
+  .contact-info li {
+    font-weight: 500;
+    font-size: 1.250rem;
+  }
+
+  .footer-container h4 {
+    font-weight: 500;
+    font-size: 1.5rem;
+
+  }
+
+  @media (min-width: 600px) {
+
+    .logo-nav {
+      width: 258px;
+    }
+
+    .primary-nav ul {
+      width: 50%;
+      height: 100vh;
+      padding: 7em 1em 1em 1em;
+      background-color: #F4CE14;
+      /* top: 106.69px; */
+      top: 0;
+      right: -100%;
+    }
+    
+    .primary-nav ul.visible {
+      /* top: 106.69px; */
+      top: 0;
+      right: 50%;
+    }
+
+
+    /* .logo-nav {
+      width: 258px;
+    }
+
+    .primary-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .primary-nav ul {
+      display: inline;
+      position: unset;
+      opacity: 1;
+      padding: 0;
+      display: flex;
+
+
+    }
+
+    .primary-nav ul.visible {
+      transform: none;
+      position: unset
+    }
+
+    .primary-nav ul li {
+
+    }
+
+    .primary-nav ul li a {
+      color: black;
+      background-color: transparent;
+      font-size: 1.1em;
+    } */
+
+    .hero-container {
+      grid-template-columns: repeat(2, 1fr);
+  
+    }
+
+    .specials-section {
+      padding: 2em;
+    }
+
+    .specials-section-title {
+      margin: 0 0 2em 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2em;
+    
+    
+    }
+    
+    .specials-grid-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1.85em;
+    }
+
+    .specials-card {
+      background-color: #EDEFEE;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 1em;
+    }
+    
+    .dish-info {
+      padding: 1.5em;
+      width: 60%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .dish-photo {
+      width: 40%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 1em;
+      border-bottom-right-radius: 1em;
+      order: 2;
+  
+    }
+
+    .testimonials-grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: 1.5em;
+    }
+
+    .aboutus-images-grid {
+      grid-template-columns: repeat(2, 1fr)
+    }
+
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr)
+
+    }
+
+
+  }
+
+  @media (min-width: 768px) {
+
+    .hamburger {
+      display: none;
+    }
+
+
+    .primary-nav {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo-nav {
+      width: 258px;
+
+    }
+
+    .primary-nav ul {
+      position: unset;
+      width: 100%;
+      height: fit-content;
+      opacity: 1;
+      padding: 0;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+
+    }
+
+    .primary-nav ul.visible {
+      transform: none;
+
+    }
+
+    .primary-nav ul li {
+      background-color: transparent;
+    }
+
+    .primary-nav ul li a {
+      color: black;
+      background-color: transparent;
+      border-radius: 1em;
+      border: none;
+      font-size: 1.1em;
+    }
+
+    .primary-nav ul li a:not(.active):hover,
+    .primary-nav .active {
+      background-color:  #495E57;
+      color:   #F4CE14;
+    }
+
+    .specials-grid-container {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 1.85em;
+    }
+
+    .specials-card {
+      background-color: #EDEFEE;
+      max-width: 336.2px;
+      height: 500px;
+      border: solid 1px black;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .dish-info {
+      padding: 1.5em;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .dish-photo {
+      width: 100%;
+      height: 200px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      object-fit: cover;
+      order: -1;
+  
+    }
+
+    .testimonials-grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 1.5em;
+    }
+
+    .sub-header {
+      background-color: #495E57;
+      width: 100%;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+     .sub-header h1 {
+      margin: 0;
+      font-family: 'Markazi Text', serif;
+      font-size: 4em;
+      font-weight: 600;
+      line-height: 0.8;
+      color: #F4CE14;
+    }
+
+    .sub-header p {
+      margin: 0;
+      font-size: 0.8em;
+      font-weight: 400;
+      color: white;
+    }
+
+    .form-section {
+      margin: 0 auto;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .form-section h2 {
+      margin: 0.4em 0;
+      font-family: 'Markazi Text', serif;
+      font-size: 2.5em;
+    }
+
+    .form-container {
+      background-color: #495E57;
+      margin: 0 0 2em 0;
+      padding: 3.375em 7.937em;
+      border-radius: 1em;
+      width: 640px;
+      height: 540px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      color: #F4CE14;
+    }
+
+    .form-instructions {
+      width: 100%;
+      text-align: center;
+      color: #F4CE14;
+      font-size: 1.2em;
+      font-weight: 700;
+      /* border: solid 1px #F4CE14; */
+    }
+
+    .form-instructions p {
+      margin-top: 0;
+    }
+
+    .form-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 1em;
+      grid-template-areas: 
+              "date time"
+              "diners diners"
+              "location location"
+              "special special";
+    }
+
+    
+    
+    #date,
+    #reserved-time,
+    #diners,
+    #table-location,
+    #special-occasion {
+      width: 100%;
+      height: 40px;
+      border-radius: 0.6em;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    
+    
+    #reserved-time,
+    #date {
+      text-align: center;
+    }
+    
+    #diners,
+    #table-location,
+    #special-occasion,
+    #fname,
+    #lname,
+    #email,
+    #phone,
+    #special-request  {
+      padding: 0 1em;
+    }
+    
+    #date,
+    #label-date {
+      grid-area: date;
+    }
+    
+    #reserved-time,
+    #label-time {
+      grid-area: time;
+    }
+
+    #diners,
+    #label-diners {
+      grid-area: diners;
+    }
+    
+    #table-location,
+    #label-table {
+      grid-area: location;
+    }
+    
+    #special-occasion,
+    #label-special {
+      grid-area: special;
+    }
+
+    .form-container-contact {
+      background-color: #495E57;
+      margin: 0 0 2em 0;
+      padding: 2.9em 7.937em;
+      border-radius: 1em;
+      width: 640px;
+      height: 540px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      color: #F4CE14;
+      position: relative;
+    }
+
+    .form-instructions-contact {
+      position: absolute;
+      bottom: 20px;
+      left: 395px;
+      z-index: 10;
+
+    }
+
+    .form-instructions-contact p {
+      margin: 0;
+      color: #F4CE14;
+    }
+    
+    .form-body-contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1em;
+    }
+
+    #fname,
+    #lname,
+    #email,
+    #phone,
+    #special-request  {
+      width: 100%;
+      height: 40px;
+      border-radius: 0.6em;
+      margin-top: 0.5em;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    #special-request {
+      height: auto;
+      resize: none;
+    }
+
+    .btn-continue {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
+      margin: 0 0 2em 0;
+      width: 200px;
+      height: 40px;
+      border-radius: 16px;
+      border: none;
+      background-color: #F4CE14;
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .btns-container {
+      width: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .confirmation-container {
+      width: 640px;
+      height: 540px;
+      margin: 3.5em 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .confirmation-container h2,
+    .confirmation-container p {
+      margin: 0;
+    }
+
+    .confirmation-container p {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .btns-container-confirmation {
+      display: flex;
+      justify-content: center;
+    }
+
+   }
+
+   @media (min-width: 1024px) {
+    footer,
+    .hero-section,
+    .specials-section,
+    .testimonials-section,
+    .aboutus-section {
+      padding: 0;
+
+    }
+
+    /* header,
+    footer,
+    .hero-section,
+    .specials-section,
+    .testimonials-section,
+    .aboutus-section {
+      width: 100%;
+      padding: 0;
+    
+    
+    } */
+    
+    /* .primary-nav,
+    .hero-container,
+    .specials-grid-container,
+    .testimonials-container,
+    .aboutus-container,
+    .footer-container {
+      margin: 0 auto;
+      max-width: 60em;
+    } */
+    
+
+    .primary-nav {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .primary-nav ul {
+      position: unset;
+      width: max-content;
+      height: fit-content;
+      opacity: 1;
+      padding: 0;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1em;
+
+    }
+
+    .hero-section {
+      background-color: #495E57;
+      height: 406px;
+      display: flex;
+      align-items: center;
+    
+    }
+
+    .hero-container {
+      margin: 0 auto;
+      height: 346px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+      /* display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start;
+      gap: 1.5em; */
+    }
+    
+    .cta-reserve-table {
+      align-self: flex-start;
+      width: 200px;
+      height: 40px;
+      border-radius: 16px;
+      border: none;
+      background-color: #F4CE14;
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      /* margin-bottom: 4.5em; */
+    
+    }
+    
+    .hero-text-container {
+      text-align: left;
+      /* width: 100%;
+      height: 100%; */
+      width: 422px;
+      height: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
+    }
+    
+    .hero-text-container h1 {
+      margin: 0 0 0 0;
+      padding: 0;
+      color: #F4CE14;
+      font-family: 'Markazi Text';
+      line-height: 0.8;
+      font-weight: bold;
+      font-size: 64px;
+    }
+    
+    .hero-text-container h3 {
+      margin-top: 0;
+      font-family: 'Markazi Text';
+      font-weight: 400;
+      font-size: 32px;
+    }
+    
+    .hero-text-container {
+      font-weight: 400;
+      font-size: 20px;
+    }
+    
+    .hero-photo {
+      /* width: 100%; */
+      width: 400px;
+      height: 424px;
+      border-radius: 16px;
+      object-fit: cov;
+      position: absolute;
+      top: 0;
+      right: 0;
+      
+    
+    }
+    
+    .specials-section {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    
+    .specials-section-title {
+      margin: 5em 0 2em 0;
+      width: 60em;
+      /* margin: 0 auto; */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    
+    
+    }
+    
+    .specials-title {
+      margin: 0;
+      font-family: 'Markazi Text';
+      line-height: 0.8;
+      font-weight: 700;
+      font-size: 4rem;
+    }
+    
+    .cta-online-menu {
+      display: block;
+      margin: 0;
+      width: 200px;
+      height: 40px;
+      border-radius: 16px;
+      border: none;
+      background-color: #F4CE14;
+      font-family: 'Karla', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    .specials-grid-container {
+      width: 100%;
+      margin-bottom: 4em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 1em;
+    }
+    
+    .specials-card {
+      background-color: #EDEFEE;
+      width: 100%;
+      height: 500px;
+      border: solid 1px black;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .dish-info {
+      padding: 1.5em;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .dish-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+      border-bottom-right-radius: unset;
+      order: -1;
+    }
+    
+    .dish-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .dish-title,
+    .dish-price {
+      margin: 0;
+    }
+    
+    .dish-title {
+      font-family: 'Markazi Text';
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    
+    .dish-price {
+      font-weight: bold;
+      color: #EE9972;
+      font-size: 1rem;
+    }
+    
+    .delivery-link {
+      display: block;
+      color: black;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .delivery-icon {
+      margin-left: 1em;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    .testimonials-section {
+      height: 590px;
+      background-color: #495E57;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+    
+    .testimonials-section h2 {
+      margin: 0;
+      color: white;
+      font-family: 'Markazi Text';
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 0.8;
+    }
+    
+    .testimonials-grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: auto;
+      gap: 1.5em;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      padding: 10px;
+      width: 220px;
+      height: 374px;
+      border-radius: 16px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    
+    }
+    
+    .testimonial-card h4 {
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    
+    .guest-photo {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+    }
+    
+    .stars-rating {
+      margin: 10px 0;
+    
+    }
+    
+    .testimonial-card p {
+      margin-bottom: 10px;
+    }
+    
+    .aboutus-section {
+      height: 578px;
+      display: flex;
+      align-items: center;
+    
+    }
+    
+    
+    .aboutus-container {
+      height: 32.375em;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .aboutus-container h2,
+    .aboutus-container p {
+      width: 422px;
+    }
+    
+    .aboutus-container h2 {
+      margin: 0;
+      font-family: 'Markazi Text';
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 0.8;
+    }
+    
+    .aboutus-container h4 {
+      margin: 0;
+      font-family: 'Markazi Text';
+      font-weight: 600;
+      font-size: 32px;
+    }
+    
+    .aboutus-container p {
+      margin-top: 50px;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+    
+    .photo-container-1 {
+      width: 272px;
+      height: 320px;
+      /* border: 1px solid black; */
+      position: absolute;
+      right: 0;
+      top: 0;
+    
+    }
+    
+    .photo-container-2 {
+      width: 272px;
+      height: 320px;
+      /* border: 1px solid black; */
+      position: absolute;
+      right: 200px;
+      top: 198px;
+      z-index: -1;
+    
+    }
+    
+    .photo-chefs-b,
+    .photo-chefs-a {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    
+    footer {
+      background-color: #495E57;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    
+    .footer-container {
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 1.5em;
+      /* align-items: center; */
+    }
+    
+    .logo-footer {
+      width: 173px;
+    }
+    
+    .footer-container ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+   }

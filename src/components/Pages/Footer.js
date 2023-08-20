@@ -1,12 +1,12 @@
 import React from 'react'
-import logowhite from "../images/Little Lemon logo white.png"
+import logowhite from "../../images/Little Lemon logo white.png"
 
 const Footer = () => {
   return (
     <footer>
         <div className='footer-container'>
             <img className="logo-footer" src={logowhite} alt='Little Lemon Logo Footer' />
-            <div className='footer-nav-container'>
+            {/* <div className='footer-nav-container'> */}
                 <nav className='secondary-nav'>
                     <h4>Navigation</h4>
                     <ul>
@@ -34,7 +34,7 @@ const Footer = () => {
                         <li><a href='/#'>Pinterest</a></li>
                     </ul>
                 </nav>
-            </div>
+            {/* </div> */}
         </div>
     </footer>
   )
