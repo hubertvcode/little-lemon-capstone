@@ -13,7 +13,7 @@ function Hero() {
                 <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
 
               </div>
-                <NavLink  to="/reservations" className='cta-reserve-table'>Reserve a Table</NavLink>
+                <NavLink  to="/reserve" className='cta-reserve-table'>Reserve a Table</NavLink>
             </div>
             <img className='hero-photo'  src={heroPhoto} alt='Photo of a server showing a delicious Mediterranean dish' />
         </div>

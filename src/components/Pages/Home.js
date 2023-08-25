@@ -4,15 +4,15 @@ import Specials from "./Specials"
 import Testimonials from './Testimonials'
 import AboutUs from './AboutUs'
 
-function Main() {
+function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Specials />
       <Testimonials />
-      <AboutUs />
-    </main>
+      <AboutUs  location={"home"}/>
+    </>
   )
 }
 
-export default Main
+export default Home
