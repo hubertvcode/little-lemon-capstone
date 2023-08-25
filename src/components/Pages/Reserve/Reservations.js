@@ -28,7 +28,7 @@ const Reservations = () => {
                 to reserve a table.</p>
             </div>
             <form onSubmit={handleSubmit} className='form-body'>
-                <label id='label-date' htmlFor="date" >  Date *
+                {/* <label id='label-date' htmlFor="date" >  Date * */}
                 <input 
                   id="date" 
                   type="date" 
@@ -37,8 +37,8 @@ const Reservations = () => {
                   onChange={(e) => setFormData({...formData, date: e.target.value})} 
                   
                   />                  
-                </label>
-                <label id='label-time' htmlFor="reserved-time">Time of Reservation *
+                {/* </label> */}
+                {/* <label id='label-time' htmlFor="reserved-time">Time of Reservation * */}
                 <input 
                   id="reserved-time"
                   type="time" 
@@ -49,7 +49,7 @@ const Reservations = () => {
                   max="22:00" 
                    
                   />
-                </label>
+                {/* </label> */}
                 <label id='label-diners' htmlFor="diners">Number of Diners *
                 <select 
                   name="diners" 
@@ -61,8 +61,8 @@ const Reservations = () => {
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
-                  <option value="4">5</option>
-                  <option value="4">6</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
                 </select>
                 </label>
                 <label id='label-table' htmlFor="table-location">Table Location

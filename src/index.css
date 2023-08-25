@@ -1,14 +1,18 @@
 * {
   box-sizing: border-box;
+
 }
 
-body {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Markazi Text', serif;
   font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
 
 }
+
 
 
 header,
@@ -116,6 +120,7 @@ header {
   opacity : 1;
   top: 106.69px;
   right: 100%;
+
 }
 
 
@@ -135,7 +140,7 @@ header {
   color: black;
   background-color: #F4CE14;
   border-bottom: solid black 1px;
-
+  overflow: hidden;
 }
 
 .primary-nav ul li a:not(.active):hover,
@@ -719,11 +724,13 @@ header {
   #date,
   #label-date {
     grid-area: date;
+    border: 2px solid red;
   }
   
   #reserved-time,
   #label-time {
     grid-area: time;
+    border: 2px solid red;
   }
 
   #diners,
@@ -975,11 +982,22 @@ header {
   }
 
   .form-container {
-    margin-bottom: 3.5em;
+    margin-bottom: 0;
+  }
+
+  .form-body {
+    width: 100%;
+  }
+
+  #date,
+  #label-date
+  #reserved-time,
+  #label-time {
+    width: 100%;
   }
 
   .form-container-contact {
-    margin: 0 0 7px 0;
+    margin: 0;
     padding: 2em;
     border-radius: 1em;
     width: 100%;
@@ -1009,7 +1027,7 @@ header {
   .confirmation-container {
     width: 100%;
     height: fit-content;
-    margin: 0 0 5.7em 0;
+    margin: 0 0 2em 0;
     padding: 1em;
     background-color: white;
     border-radius: 1em;
@@ -1025,12 +1043,16 @@ header {
 
   .btns-container {
     width: 100%;
-    margin-top: 2em;
+    /* margin-top: 2em; */
     padding: 0 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .btns-container.one {
+    margin-top: 0;
   }
 
   a.btn-continue,
