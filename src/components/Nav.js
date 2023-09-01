@@ -27,7 +27,7 @@ function Nav() {
             <li><NavLink to="/" onClick={toggleHamburger}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={toggleHamburger} >About</NavLink></li>
             <li><NavLink to="/menu" onClick={toggleHamburger} >Menu</NavLink></li>
-            <li><NavLink to="/reserve" onClick={toggleHamburger} >Reservations</NavLink></li>
+            <li><NavLink to="/bookings" onClick={toggleHamburger} >Reservations</NavLink></li>
             <li><NavLink to="/orderonline" onClick={toggleHamburger} >Order Online</NavLink></li>
             <li><NavLink to="/login" onClick={toggleHamburger} >Login</NavLink></li>
         </ul>
