@@ -1,15 +1,11 @@
 import React from 'react'
 import {
     faFacebook,
-    faTwitter,
+
     faInstagram,
     faYoutube
   } from '@fortawesome/free-brands-svg-icons';
-  import {
-    faEnvelope,
-    faLocationDot,
-    faPhone
-  } from '@fortawesome/free-solid-svg-icons';
+
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logoWhite from "../images/Little Lemon logo white.png"
 import logoColors from "../images/Little Lemon Logo colors.png"
@@ -43,15 +39,15 @@ const Footer = () => {
     
 
     // Conditional rendering of the footer logo and style, depending on the location pathname (Home, Reserve, About, etc..)
-    const lemonLogo = (location.pathname === "/reserve" && windowWidth < currentWindowSize )|| 
-                      (location.pathname === "/reserve/reservecontactinfo" && windowWidth < currentWindowSize) || 
-                      (location.pathname === "/reserve/reservereview" && windowWidth < currentWindowSize )|| 
-                      (location.pathname === "/reserve/reserveconfirmation" && windowWidth < currentWindowSize) ? logoColors : logoWhite
+    const lemonLogo = (location.pathname === "/bookings" && windowWidth < currentWindowSize )|| 
+                      (location.pathname === "/bookings/bookingcontactinfo" && windowWidth < currentWindowSize) || 
+                      (location.pathname === "/bookings/bookingreview" && windowWidth < currentWindowSize )|| 
+                      (location.pathname === "/bookings/bookingconfirmation" && windowWidth < currentWindowSize) ? logoColors : logoWhite
 
-    const altStyle = (location.pathname === "/reserve" && windowWidth < currentWindowSize) || 
-                      (location.pathname === "/reserve/reservecontactinfo" && windowWidth < currentWindowSize) || 
-                      (location.pathname === "/reserve/reservereview" && windowWidth < currentWindowSize) || 
-                      (location.pathname === "/reserve/reserveconfirmation" && windowWidth < currentWindowSize) ? "reserve-style" : null
+    const altStyle = (location.pathname === "/bookings" && windowWidth < currentWindowSize) || 
+                      (location.pathname === "/bookings/bookingcontactinfo" && windowWidth < currentWindowSize) || 
+                      (location.pathname === "/bookings/bookingreview" && windowWidth < currentWindowSize) || 
+                      (location.pathname === "/bookings/bookingconfirmation" && windowWidth < currentWindowSize) ? "reserve-style" : null
 
   return (
     <footer>

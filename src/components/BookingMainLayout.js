@@ -18,11 +18,14 @@ const BookingMainLayout = () => {
   const tablesType = ["No preference", "Inside", "Outside"]
   const occasions = ["No special occasion", "Birthday", "Anniversary", "Engagement"]
   const minDate = new Date().toISOString().split('T')[0];
-  const regexName = new RegExp(/^[A-Za-z]{3,16}$/)
-  const regexPhone = new RegExp(/[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}/)
+
+
+  const [errorM, setErrorM] = useState({})
+  const [confOptions, setConfOptions] = useState({emailOption: "Email"})
+
   const navigate = useNavigate()
 
-  
+ 
   const initializeTimes = initialAvailableTimes => 
   [...initialAvailableTimes, ...fetchAPI(new Date())];
   
@@ -55,7 +58,7 @@ const BookingMainLayout = () => {
   },[])
   
   function localSaves () {
-    //Gets localstorage stored values
+    //Gets from localstorage the stored values of myFormData
     const saved = localStorage.getItem('myFormData')
     const initialValues = JSON.parse(saved)
     return initialValues || "";
@@ -68,116 +71,30 @@ const BookingMainLayout = () => {
   
   }, [])
 
-  // const [myFormData, setMyFormData] = useState({
-  //   date: new Date(),
-  //   time: availableTimes[0],
-  //   diners: "1",
-  //   tableLocation: "No preference",
-  //   occasion: "No special occasion",
-  //   fname: '',
-  //   lname: '',
-  //   email: '',
-  //   phone: '',
-  //   specialRequest: '',
-  //   emailOption: true,
-  //   textOption: false
-    
-  // })
-
-
 useEffect(() => {
   localStorage.setItem("myFormData", JSON.stringify(myFormData))
 
 },[myFormData])
     
-    const [confOptions, setConfOptions] = useState({
 
-    })
-    
-    
-    const isValidDate = (selectedDate) => {
-      const today = new Date()
-      return selectedDate > today
-    }
 
-    
-    const handleDateChange = date => {
-       if (isValidDate(date)) {
-        setMyFormData({...myFormData, date: date})
-        dispatch(date);
-      }
-    };
-    
-    const handleChange = (e) => {
-        //Updates the checkbox value to "true" or "false" to myFormData.emailOption or
-        //myFormData.textOption
-        setMyFormData({...myFormData, [e.target.name]: e.target.checked })
+const isValidDate = (selectedDate) => {
+  const today = new Date()
+  return selectedDate > today
+}
 
-        if (e.target.checked === true) {
-          // Adds checkbox value and key (emailOption or textOption) to object 
-          //when checkbox is checked
-          setConfOptions({...confOptions, [e.target.name]: e.target.value })
-        } else {
-          // removes key from object when checkbox is not checked
-          const newConfOptions = {...confOptions};
-          delete newConfOptions[e.target.name]
-          setConfOptions(newConfOptions);
-        }
-         
-      };
-    
-    const [activate, setActivate] = useState(Boolean);
-    const [errorM, setErrorM] = useState(Object)
 
-    function validateInputs() {
-      let errors = {};
-    
-      if(!myFormData.fname) {
-        errors.fname = 'Please enter your First Name';
-      } else if (!regexName.test(myFormData.fname)){
-        errors.fname = 
-        "First Name should be at least 3 characters long and shouldn't include numbers or special characters!";
-      }
-      if(!myFormData.lname) {
-        errors.lname = 'Please enter your Last Name';
-      } else if (!regexName.test(myFormData.lname)){
-        errors.lname = 
-        "Last Name should be at least 3 characters long and shouldn't include numbers or special characters!";
-      }
-    
-      if (!myFormData.email) {
-        errors.email = 'Please enter your email';
-      } else if (!/\S+@\S+\.\S\S+/.test(myFormData.email)) {
-        errors.email = 'Email address is invalid';
-      }
-      if (!myFormData.phone) {
-        errors.phone = 'Please enter your phone number';
-      } else if (!regexPhone.test(myFormData.phone)) {
-        errors.phone = "Please enter a valid US phone number with 10 digits";
-      }
-      
-  
-      return errors;
-    }
+const handleDateChange = date => {
+  if (isValidDate(date)) {
+    setMyFormData({...myFormData, date: date})
+    dispatch(date);
+  }
+};
 
-    //Activates or Deactivates "Continue" button on Form Step 2 (ReserveContactInfo)
 
-    useEffect( () => {
-      if (Object.keys(validateInputs()).length === 0) {
-        setActivate(true)
-
-      } else {
-        setActivate(false)
-      }
-      // const active = continueBtnActive()
-       setErrorM(validateInputs())
-   
-    }, [myFormData.fname, 
-      myFormData.lname, 
-      myFormData.email, 
-      myFormData.phone])
-
-    const navigateToReview = () => navigate("/bookings/bookingreview")
+  // The submitForm function, handles the submision of the information of the forms in BookingForm and BookingContactInfo components
+  // to a fake API that returns true as response, then the localstorage is initialized after that user navigates to 
+  // the BookingConfirmation component
 
     const submitForm = (e) => {
       e.preventDefault()
@@ -185,7 +102,6 @@ useEffect(() => {
       if (res) {
         console.log("Form submitted")
         console.log(myFormData)
-        console.log(confOptions)
         localStorage.clear(myFormData)
         localStorage.setItem("myFormData", JSON.stringify(initialFormData))
        return navigate("/bookings/bookingconfirmation")
@@ -199,7 +115,7 @@ useEffect(() => {
           <h1>Reserve a Table</h1>
           <p>For more information please call us to 1-800-545 0000</p>
         </div>
-        <FormContext.Provider value={{initialFormData, myFormData, setMyFormData, confOptions, setConfOptions, submitForm, navigateToReview, availableTimes, numberDiners, tablesType, occasions, minDate, handleDateChange, handleChange, inputsInfoData, checkboxData, activate, errorM }}>
+        <FormContext.Provider value={{initialFormData, myFormData, setMyFormData, submitForm, availableTimes, numberDiners, tablesType, occasions, handleDateChange, inputsInfoData, checkboxData, errorM, setErrorM, confOptions, setConfOptions}}>
           <Outlet />
         </FormContext.Provider>
 

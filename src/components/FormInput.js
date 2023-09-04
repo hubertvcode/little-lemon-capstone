@@ -7,10 +7,14 @@ const FormInput = (props) => {
 
   const { errorM } = useContext(FormContext);
   const [focused, setFocused] = useState(false);
-  const { labelText, labelId, htmlFor, onChange, id, name, ...inputProps } = props;
+  const { labelText, labelId, htmlFor, onChange, id, testId, name, ...inputProps } = props;
 
+  
   const handleFocus = (e) => {
     setFocused(true);
+ 
+    // console.log(`Is the input ${e.target.id} focused?: ${focused}`)
+
     const inputRed = document.getElementById(e.target.id)
     if (errorM[e.target.id]){
       inputRed.classList.add("invalid")
@@ -27,16 +31,18 @@ const FormInput = (props) => {
       <input
         {...inputProps}
         id={id}
+        data-testid={testId}
+        name={name}
         onChange={onChange}
         onBlur={handleFocus}
         onFocus={() =>
-          inputProps.name === "phone" && setFocused(true)
+          name === "phone" && setFocused(true)
         }
         focused={focused.toString()}
         aria-errormessage={focused && errorM[name] ? true : false}
         aria-label={labelText}
       />
-      {focused && errorM[name] ? <p className="errormessage">{errorM[name]}</p> : null}
+      { focused && errorM[name] ? <p className="errormessage">{errorM[name]}</p> : null}
       </label>
     </>
   );

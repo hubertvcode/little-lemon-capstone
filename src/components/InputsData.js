@@ -4,6 +4,7 @@
 const inputsInfoData = [
     {
       id: "fname",
+      testId: "firstName",
       labelText: "First Name *",
       labelId: "label-fname",
       htmlFor: "fname",
@@ -14,6 +15,7 @@ const inputsInfoData = [
     },
     {
       id: "lname",
+      testId: "lastName",
       labelText: "Last Name *",
       labelId: "label-lname",
       htmlFor: "lname",
@@ -24,7 +26,8 @@ const inputsInfoData = [
     },
     {
       id: "email",
-      labelText: "Email *",
+      testId: "emailAddress",
+      labelText: "mail*",
       labelId: "label-email",
       htmlFor: "email",
       name: "email",
@@ -34,6 +37,7 @@ const inputsInfoData = [
     },
     {
       id: "phone",
+      testId: "phoneNumber",
       labelText: "Phone *",
       labelId: "label-phone",
       htmlFor: "phone",

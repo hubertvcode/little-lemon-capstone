@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext } from 'react';
+import { useContext} from 'react';
 import { NavLink } from 'react-router-dom'
 import { FormContext } from '../../BookingMainLayout';
 import DatePicker from 'react-datepicker'
@@ -23,7 +23,6 @@ const BookingForm = () => {
     <>
 
         <div className='form-section'>
-          <h2>Find a table for any occasion.</h2>
           <div className='form-container'>
             <div className='form-instructions'>
               <p>Please fill out all the required * fields
@@ -45,13 +44,14 @@ const BookingForm = () => {
                 <label id='label-time' htmlFor="reserved-time">Time of Reservation *
                 <select 
                   id="reserved-time"
+                  data-testid="reservedTime"
                   name="time" 
                   value={myFormData.time}
                   onChange={(e) => setMyFormData({...myFormData, time: e.target.value})} 
                   required={true}
                   >
                     {availableTimes.map(times =>
-                      <option data-testid='booking-time'  key={times} value={times} >
+                      <option data-testid='bookingTime'  key={times} value={times} >
                         {times}
                        </option>
                       )}
@@ -61,12 +61,13 @@ const BookingForm = () => {
                 <select 
                   name="diners" 
                   id="diners"
+                  data-testid='diners'
                   value={myFormData.diners}
                   onChange={(e) => setMyFormData({...myFormData, diners: e.target.value})} 
                   required={true}
                   >
                     {numberDiners.map(diners => 
-                      <option  data-testid='diners-option' key={diners} value={diners} >
+                      <option  data-testid='dinersOption' key={diners} value={diners} >
                         {diners}
                        </option>
                       )}
@@ -94,7 +95,7 @@ const BookingForm = () => {
                   onChange={(e) => setMyFormData({...myFormData, occasion: e.target.value})} 
                   >
                     {occasions.map(occasion => 
-                      <option data-testid='occasion-option'  key={occasion} value={occasion} >
+                      <option data-testid='occasionOption'  key={occasion} value={occasion} >
                         {occasion}
                        </option>
                       )}

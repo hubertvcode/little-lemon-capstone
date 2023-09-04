@@ -724,7 +724,8 @@ input {
   }
 
   .form-section h2 {
-    display: none;
+    margin-top: 0;
+    text-align: center;
   }
 
   .form-container,
@@ -862,7 +863,7 @@ input {
 
   /* FORM CONTACT INFO  */
 
-  .form-instructions-contact {
+  .form-instructions-contact p {
     display: none;
   }
 
@@ -985,6 +986,7 @@ input {
 }
 
 .btns-container-review {
+  margin-top: 1.312em;;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 13;
