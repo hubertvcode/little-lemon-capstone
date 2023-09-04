@@ -27,7 +27,7 @@ const inputsInfoData = [
     {
       id: "email",
       testId: "emailAddress",
-      labelText: "mail*",
+      labelText: "Email *",
       labelId: "label-email",
       htmlFor: "email",
       name: "email",

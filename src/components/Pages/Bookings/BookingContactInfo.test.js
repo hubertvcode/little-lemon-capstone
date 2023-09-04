@@ -3,7 +3,7 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { FormContext } from '../../BookingMainLayout';
 import BookingContactInfo from './BookingContactInfo';
-import { waitFor } from '@testing-library/react';
+
 
 describe('BookingContactInfo', () => {
   let setMyFormData, setErrorM, myFormData, errorM, confOptions, setConfOptions;
@@ -35,7 +35,7 @@ describe('BookingContactInfo', () => {
   test('should render input fields correctly', () => {
     expect(screen.getByLabelText(/First Name */i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Last Name */i)).toBeInTheDocument();
-    expect(screen.getByLabelText('mail*')).toBeInTheDocument();
+    expect(screen.getByTestId('emailAddress')).toBeInTheDocument();
     expect(screen.getByLabelText(/Phone */i)).toBeInTheDocument();
   });
 
@@ -43,7 +43,7 @@ describe('BookingContactInfo', () => {
     act(() => {
       fireEvent.change(screen.getByLabelText(/First Name */i), { target: { value: 'John1' } });
       fireEvent.change(screen.getByLabelText(/Last Name */i), { target: { value: '' } });
-      fireEvent.change(screen.getByLabelText('mail*'), { target: {value: 'notAnEmail'} });
+      fireEvent.change(screen.getByTestId('emailAddress'), { target: {value: 'notAnEmail'} });
       fireEvent.change(screen.getByLabelText(/Phone */i), { target: { value: '123' } });
     });
 
@@ -55,7 +55,7 @@ describe('BookingContactInfo', () => {
     act(() => {
       fireEvent.change(screen.getByLabelText(/First Name */i), { target: { value: 'John' } });
       fireEvent.change(screen.getByLabelText(/Last Name */i), { target: { value: 'Dole' } });
-      fireEvent.change(screen.getByLabelText('mail*'), { target: { value: 'jhon@hotmail.com' } });
+      fireEvent.change(screen.getByTestId('emailAddress'), { target: { value: 'jhon@hotmail.com' } });
       fireEvent.change(screen.getByLabelText(/Phone */i), { target: { value: '3054500000' } });
     });
 
