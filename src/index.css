@@ -1374,7 +1374,6 @@ a.btn-continue.confirmation {
     .form-container-contact,
     .form-container-review,
     .confirmation-container {
-      height: 572px;
       height: fit-content;
       padding: 2em 4.5em;
 
@@ -1383,7 +1382,7 @@ a.btn-continue.confirmation {
     .form-body,
     .form-body-contact,
     .form-body-review {
-      height: 100%;
+      height: fit-content;
     }
 
     a.btn-continue.back {
